@@ -6,7 +6,7 @@
 // Duplicate declarations have been removed to fix SyntaxError: Identifier 'assetVersion' has already been declared
 window.MURCH_DATA = {
  control: {
- asOf: 'Sep 7, 2026 — executed basis through Saturday Sep 5 (Luis Romero daily executive reports, Sep 5 CORREGIDO version) + the Sep 7 workbook re-cut. Sunday Sep 6 was a non-production day bar Brumont and AB Power. Monday Sep 7 field note: INV-11 trench CLOSED and ready for terminations',
+ asOf: 'Sep 7, 2026 — executed basis through Saturday Sep 5 (daily executive production reports, corrected version) + the Sep 7 workbook re-cut. Sunday Sep 6 was a non-production day. Monday Sep 7 field note: the INV-11 trench is closed and ready for terminations',
  // MACHINE DATE. index.html derives every plan-to-date curve from this, NOT from the
  // prose above. An em-dash in asOf made new Date(asOf) return Invalid Date on Aug 25,
  // which silently collapsed every 'Plan today' to 0% and the project total to 10.9%.
