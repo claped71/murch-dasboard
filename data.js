@@ -1,12 +1,12 @@
 'use strict';
 // Murch dashboard data - update THIS file for daily changes
-// CACHE BUSTER 20260908b - Monday Sep 7 production (daily executive report, corrected self-performance version, confirmed by the project director)
+// CACHE BUSTER 20260908c - Monday Sep 7 production (daily executive report, corrected self-performance version, confirmed by the project director)
 // + Sep 8 control cuts (workbook re-cut, MV termination control, SE tracker, EHS headcount); Juan de la Chica's Sep 8 end-of-project plan added as planTracker (Jose, Sep 8)
 // Note: assetVersion, assetBase, asset(), and assetFallback() are defined in index.html\u2019s inline script
 // Duplicate declarations have been removed to fix SyntaxError: Identifier 'assetVersion' has already been declared
 window.MURCH_DATA = {
  control: {
- asOf: 'Sep 8, 2026 — executed basis through Monday Sep 7 (daily executive production report for Sep 7, corrected self-performance version, confirmed by the project director) + the Sep 8 control cuts: CM workbook re-cut, MV termination control, SE tracker and the Sep 8 EHS headcount (214). Sunday Sep 6 was a non-production day. Monday Sep 7: 4,204 modules (United 3,607 in Zone G, Brumont 597), INV-11 closed by the self-perform crew, 890 ft of trunk, 42 harness lines and 202 supports by the United electrical crew; the racking contractor and ITS were off site',
+ asOf: 'Sep 8, 2026 — executed basis through Monday Sep 7 (daily executive production report for Sep 7, corrected self-performance version, confirmed by the project director) + the Sep 8 control cuts: CM workbook re-cut, MV termination control, SE tracker and the Sep 8 EHS headcount (214). Sunday Sep 6 was a non-production day. Monday Sep 7: 4,204 modules (3,607 in Zone G by the eastern module crew, 597 by the western crew), INV-11 closed on LV by the self-perform crew, 890 ft of trunk, 42 harness lines and 202 supports by the eastern electrical crew; the racking contractor and the MV plough contractor were off site',
  // MACHINE DATE. index.html derives every plan-to-date curve from this, NOT from the
  // prose above. An em-dash in asOf made new Date(asOf) return Invalid Date on Aug 25,
  // which silently collapsed every 'Plan today' to 0% and the project total to 10.9%.
