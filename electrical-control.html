@@ -269,6 +269,7 @@ const ZONAS = {
   G :{mod:18486, modLeft:18486, rows:256, lado:'E', rackCrew:'E'},
   D :{mod:7774,  modLeft:7774,  rows:136, lado:'E', rackCrew:'E', piles:993}
 };
+let PROY = null;
 const LINEAS = [
   {id:'L1', mv:'MV-11A', zonas:['A','C'], inv:5, mc:'2026-10-02',
    scope:{harness:1082,boxes:93, homerun:54644,trunk:8723, connInv:186,connBox:372,connMV:30},
@@ -323,6 +324,10 @@ let HOY_ELEC = 9, HOY_TOTAL = 19;
     if(X.harnessDiario && X.harnessDiario.length) HARNESS = X.harnessDiario;
     if(X.harnessScope) HARNESS_SCOPE = X.harnessScope;
     if(X.harnessNota) HARNESS_NOTA = X.harnessNota;
+    /* Totales de PROYECTO. Hasta el 9 sep 2026 todo el tendido se imputaba a la L1,
+       asi que estas dos secciones leian lineas.L1 como si fuera el total. Con el
+       reparto por linea ya rebasado, el total vive en `proyecto`. */
+    if(X.proyecto) PROY = X.proyecto;
     if(X.lineas) LINEAS.forEach(function(L){
       var h = X.lineas[L.id]; if(!h) return;
       for(var k in h) if(k in L.hecho) L.hecho[k] = h[k];
@@ -732,14 +737,14 @@ function parteArneses(){
   const WD = 23, req = rem / WD;
 
   /* reconciliacion viva contra el control por linea: si dejan de cuadrar, se ve aqui */
-  const L1 = (M && M.lineas && M.lineas[0] && M.lineas[0].hecho) ? M.lineas[0].hecho.harness : null;
+  const L1 = PROY && PROY.harness != null ? PROY.harness : null;
   const rec = document.getElementById('harnessRecon');
   if(rec){
     const ok = (L1==null) || (L1===done);
     rec.innerHTML = ok
       ? '<strong>Acumulado '+F(done)+' conjuntos de '+F(HARNESS_SCOPE)+' ('+F1(done/HARNESS_SCOPE*100)+'%).</strong> '+
-        'La suma del parte diario cuadra con el control por l\u00ednea'+(L1!=null?' ('+F(L1)+')':'')+' \u2713'
-      : '<strong style="color:#b53030">DESCUADRE: el parte diario suma '+F(done)+' conjuntos y el control por l\u00ednea marca '+F(L1)+'.</strong> '+
+        'La suma del parte diario cuadra con el acumulado de proyecto'+(L1!=null?' ('+F(L1)+')':'')+' \u2713'
+      : '<strong style="color:#b53030">DESCUADRE: el parte diario suma '+F(done)+' conjuntos y el acumulado de proyecto marca '+F(L1)+'.</strong> '+
         'Reconciliar antes de publicar \u2014 esta discrepancia mantuvo el acumulado en 25 durante cinco d\u00edas hasta el 24 de agosto.';
     rec.style.background = ok ? '' : '#fdeaea';
   }
@@ -780,7 +785,7 @@ function cableSplit(){
   /* Reparto real del tendido: cada dia del parte trae homerun (hr) y trunk (tr).
      No se estima nada - es el mismo dato que alimenta la seccion 6.
      Los acumulados salen del control por linea para que cuadren con el hito. */
-  const L1 = (M && M.lineas && M.lineas[0] && M.lineas[0].hecho) ? M.lineas[0].hecho : {};
+  const L1 = PROY || {};
   const hrCum = L1.homerun != null ? L1.homerun : DIARIO.reduce((a,d)=>a+(d.hr||0),0);
   const trCum = L1.trunk   != null ? L1.trunk   : DIARIO.reduce((a,d)=>a+(d.tr||0),0);
   const WD = 22;   /* dias laborables al 18 sep desde la base vigente, domingos fuera */

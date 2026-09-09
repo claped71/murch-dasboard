@@ -2057,126 +2057,43 @@ canvas { max-width: 100%; }
           <p class="eyebrow">Electrical installation | Control by MV line &mdash; German&rsquo;s framework, adopted Aug 13</p>
           <h2>Four MV lines, each with its own date &mdash; the daily question is cable hung, harnesses, boxes, and the gap per line</h2>
         </div>
-        <p class="quality-note"><strong>The model:</strong> the electrical scope is controlled <strong>line by line, not as one pool</strong>. Each MV line carries its zones, its inverters and its own completion date, cascaded back from Mechanical Completion &mdash; <strong>the first line finishes with its LV connected by end of August</strong> and the lines close in sequence. The daily report states, per line: feet of cable hung, harnesses installed, boxes mounted, and the gap against what the date requires. <a href="electrical-control.html?v=20260820a" style="display:inline-block;margin-top:8px;padding:8px 14px;background:#0c5f43;color:#fff;border-radius:8px;font-weight:800;text-decoration:none">Open the full interactive study &rarr;</a></p>
+        <p class="quality-note"><strong>The model:</strong> the electrical scope is controlled <strong>line by line, not as one pool</strong>. Each MV line carries its zones, its inverters and its own completion date, cascaded back from Mechanical Completion &mdash; <strong>Line 1 (11A) closes its LV works on Sep 17 and the lines follow at one-week steps to Oct 10</strong> on the Sr. Controller&rsquo;s Sep 8 plan. The daily report states, per line: feet of cable hung, harnesses installed, boxes mounted, and the gap against what the date requires. <a href="electrical-control.html?v=20260820a" style="display:inline-block;margin-top:8px;padding:8px 14px;background:#0c5f43;color:#fff;border-radius:8px;font-weight:800;text-decoration:none">Open the full interactive study &rarr;</a></p>
+
+        <p class="quality-note" id="ebAlert"></p>
 
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Line</th><th>Zones &middot; inverters</th><th>Line date</th><th>Boxes / LBD</th><th>Homerun (ft)</th><th>Trunk (ft)</th><th>Harness</th><th>Connections</th></tr>
+              <tr><th>Line</th><th>Zones &middot; inverters</th><th>LV works / MC</th><th>Boxes (LBD)</th><th>Cable (lf)</th><th>Harness</th><th>LV connections</th></tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-label="Line"><strong>L1 &middot; MV-11A</strong></td>
-                <td data-label="Zones">A + C &middot; 5 inv &middot; <strong>Inv-01 + Inv-02 live</strong></td>
-                <td data-label="Line date"><strong>Oct 2</strong> &middot; LV connected end Aug</td>
-                <td data-label="Boxes"><strong>93 / 93 &middot; 100%</strong></td>
-                <td data-label="Homerun"><strong>33,523</strong> / 54,644 &middot; 61.4%</td>
-                <td data-label="Trunk"><strong>4,786</strong> / 8,723 &middot; 54.9%</td>
-                <td data-label="Harness"><strong>134</strong> / 1,082 &mdash; RECORD 39 lines / 117 strings Aug 24</td>
-                <td data-label="Connections">0 / 588</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L2 &middot; MV-11B</strong></td>
-                <td data-label="Zones">E &middot; 6 inv</td>
-                <td data-label="Line date"><strong>Oct 9</strong></td>
-                <td data-label="Boxes"><strong>27 / 110</strong> &mdash; first production Aug 14</td>
-                <td data-label="Homerun">0 / 53,456</td>
-                <td data-label="Trunk">0 / 10,409</td>
-                <td data-label="Harness">0 / 1,292</td>
-                <td data-label="Connections">0 / 696</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L3 &middot; MV-12A</strong></td>
-                <td data-label="Zones">F &middot; 6 inv</td>
-                <td data-label="Line date"><strong>Oct 16</strong></td>
-                <td data-label="Boxes">0 / 110</td>
-                <td data-label="Homerun">0 / 65,846</td>
-                <td data-label="Trunk">0 / 10,274</td>
-                <td data-label="Harness">0 / 1,258</td>
-                <td data-label="Connections">0 / 696</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L4 &middot; MV-12B</strong></td>
-                <td data-label="Zones">B + D + EW + G &middot; 6 inv</td>
-                <td data-label="Line date"><strong>Oct 25</strong></td>
-                <td data-label="Boxes">0 / 106</td>
-                <td data-label="Homerun">0 / 55,488</td>
-                <td data-label="Trunk">0 / 10,907</td>
-                <td data-label="Harness">0 / 1,340</td>
-                <td data-label="Connections">0 / 424 + 36 MV</td>
-              </tr>
-            </tbody>
+            <tbody id="ebScope"></tbody>
           </table>
+          <div id="ebNotes"></div>
         </div>
+
+        <h3 style="margin:18px 0 6px">What each line still has to install, and the rate its own date on the Sep 8 plan needs</h3>
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Line</th><th>Cable remaining (lf)</th><th>Need per day</th><th>Demonstrated</th><th>Projected cable finish</th><th>On-time status</th></tr>
+              <tr><th>Line</th><th>LV works finish</th><th>Working days</th><th>Cable remaining (lf)</th><th>Cable need/day</th><th>Harness remaining</th><th>Harness need/day</th><th>Status</th></tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-label="Line"><strong>L1 &middot; MV-11A</strong> &middot; cable target Aug 31</td>
-                <td data-label="Remaining">25,058</td>
-                <td data-label="Need"><strong>~3,162 lf/day</strong> (10 wd to Aug 31)</td>
-                <td data-label="Demonstrated">2,057 avg (last 5 reported) &middot; best 4,735</td>
-                <td data-label="Projected">~Sep 3-4 at the current average</td>
-                <td data-label="Status"><strong style="color:#a12b2b">BEHIND ~3 working days</strong> &mdash; reporting is restored, but the gang shrank to 4 electricians; the capacity additions are still not producing</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L2 &middot; MV-11B</strong> &middot; line date Oct 9</td>
-                <td data-label="Remaining">63,865</td>
-                <td data-label="Need">~1,300 lf/day from now (49 wd)</td>
-                <td data-label="Demonstrated">&mdash; not started</td>
-                <td data-label="Projected">&mdash;</td>
-                <td data-label="Status"><strong style="color:#a12b2b">AT RISK &mdash; still no second crew</strong>: United&rsquo;s LV mobilisation is in commercial negotiation and the 20-electrician Greensol crew is not fielded. Boxes 27/110 remain its only output</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L3 &middot; MV-12A</strong> &middot; line date Oct 16</td>
-                <td data-label="Remaining">76,120</td>
-                <td data-label="Need">~1,380 lf/day from now (55 wd)</td>
-                <td data-label="Demonstrated">&mdash; not started</td>
-                <td data-label="Projected">&mdash;</td>
-                <td data-label="Status"><strong style="color:#b96f18">AT RISK</strong> &mdash; the largest line; racking release in Zone F feeds it, and nothing (boxes, harness, cable) has started</td>
-              </tr>
-              <tr>
-                <td data-label="Line"><strong>L4 &middot; MV-12B</strong> &middot; line date Oct 25</td>
-                <td data-label="Remaining">66,395</td>
-                <td data-label="Need">~1,070 lf/day from now (62 wd)</td>
-                <td data-label="Demonstrated">&mdash; not started</td>
-                <td data-label="Projected">&mdash;</td>
-                <td data-label="Status"><strong style="color:#b96f18">AT RISK</strong> &mdash; four zones feed it and two are pile-gated (D) or unracked (G); the last line has the least float</td>
-              </tr>
-            </tbody>
+            <tbody id="ebRates"></tbody>
           </table>
         </div>
-        <p class="quality-note"><strong>How to read the on-time status:</strong> the four line dates cascade back from Mechanical Completion, so <strong>a line that slips pushes MC directly</strong>. L1 is the only line producing and it is ~3 working days behind its own curve at the demonstrated average &mdash; and the crew that must close that gap has shrunk to 4 electricians. The capacity answers are NOT yet on the ground: United&rsquo;s LV mobilisation sits in commercial negotiation and the 20-electrician Greensol crew is not fielded. L2&ndash;L4 are on time only in the scenario where a second crew mobilises promptly and each line stream holds its need; every day of mobilisation slip converts directly into line-date risk. Harness remains material-gated on every line, and the connection scopes (588 + 696 + 696 + 460) follow the cable.</p>
+        <p class="quality-note" id="ebRateNote"></p>
 
-        <p class="quality-note"><strong>Where the pull stands:</strong> every foot installed to date &mdash; <strong>75,280 lf</strong> &mdash; sits on <strong>Line 1 (MV-11A)</strong> in the ledger: <strong>boxes 258 of 419 (61.6%)</strong>, homerun 57,886 lf, trunk 17,394 lf, harness 896 assemblies on the contractual dashboard ledger (+155 self-perform outside it). <strong>Sep 8: the best harness day of the project &mdash; 152 lines (ECCS 40, United 44, self-perform 68) &mdash; and 5,533 ft of cable.</strong> <strong>Monday Sep 7: INVERTER 11 CLOSED on LV by the self-perform crew &mdash; the first station with all of its circuits landed in the cabinets</strong> (executive-report reconciliation divergence still open, and GreenSol self-perform assemblies are held outside it). <strong>Angel Urbina confirmed the inverter-to-circuit map on Sep 3 &mdash; 11A: INV 1, 2, 3, 5, 6 &middot; 11B: INV 4, 9, 11, 12, 13, 14 &middot; 12A: INV 18, 19, 20, 21, 22, 23 &middot; 12B: INV 7, 8, 10, 15, 16, 17 &mdash; so the per-circuit split can be applied once Jose rules on re-basing the ledger.</strong> Lines 2&ndash;4 remain effectively untouched on the ledger, although United&rsquo;s harness at PS18&ndash;PS23 and the self-perform work at INV-11 are physically Line 3 and Line 2 work. <strong>Sep 8 plan dates per line: 11A LV works close Sep 17 (MC Oct 2), 11B Sep 24 (MC Oct 10), 12A Oct 1 (MC Oct 17), 12B Oct 10 (MC Oct 24) &mdash; see the plan-fulfilment tracker for the activity-level status and the per-line daily rates the CM workbook derives from them.</strong></p>
-
+        <h3 style="margin:18px 0 6px">Cable pull &mdash; the last ten reported days against the rate Juan de la Chica&rsquo;s plan needs</h3>
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Day</th><th>Total hung (lf)</th><th>Homerun</th><th>Trunk</th><th>vs Line-1 need (~3,100)</th></tr>
+              <tr><th>Day</th><th>Total (lf)</th><th>Homerun</th><th>Trunk</th><th>vs plan rate</th><th>Cumulative</th><th>% of scope</th></tr>
             </thead>
-            <tbody>
-              <tr><td data-label="Day">Aug 4</td><td data-label="Total">1,956</td><td data-label="Homerun">1,956</td><td data-label="Trunk">0</td><td data-label="vs need">63%</td></tr>
-              <tr><td data-label="Day">Aug 5</td><td data-label="Total">1,915</td><td data-label="Homerun">1,915</td><td data-label="Trunk">0</td><td data-label="vs need">62%</td></tr>
-              <tr><td data-label="Day">Aug 6</td><td data-label="Total">2,560</td><td data-label="Homerun">2,560</td><td data-label="Trunk">0</td><td data-label="vs need">83%</td></tr>
-              <tr><td data-label="Day">Aug 7</td><td data-label="Total">1,969</td><td data-label="Homerun">1,969</td><td data-label="Trunk">0</td><td data-label="vs need">64%</td></tr>
-              <tr><td data-label="Day">Aug 8</td><td data-label="Total">0 &mdash; crew absent</td><td data-label="Homerun">0</td><td data-label="Trunk">0</td><td data-label="vs need">0%</td></tr>
-              <tr><td data-label="Day">Aug 10</td><td data-label="Total"><strong>3,131 &mdash; record</strong></td><td data-label="Homerun">3,131</td><td data-label="Trunk">0</td><td data-label="vs need">101%</td></tr>
-              <tr><td data-label="Day">Aug 11</td><td data-label="Total">0 &mdash; storms</td><td data-label="Homerun">0</td><td data-label="Trunk">0</td><td data-label="vs need">0%</td></tr>
-              <tr><td data-label="Day">Aug 12</td><td data-label="Total"><strong>4,735 &mdash; record</strong></td><td data-label="Homerun">4,134</td><td data-label="Trunk">601</td><td data-label="vs need"><strong>153%</strong></td></tr>
-              <tr><td data-label="Day">Aug 13</td><td data-label="Total">2,550 &mdash; Inv-02 opened</td><td data-label="Homerun">2,550</td><td data-label="Trunk">0</td><td data-label="vs need">82%</td></tr>
-              <tr><td data-label="Day">Aug 14</td><td data-label="Total">1,873 &mdash; + first supports (192) and L2 boxes (10)</td><td data-label="Homerun">1,873</td><td data-label="Trunk">0</td><td data-label="vs need">60%</td></tr>
-              <tr><td data-label="Day">Aug 15</td><td data-label="Total">2,805 &mdash; + <strong>FIRST 13 harnesses</strong>, 207 brackets, 471 hangers</td><td data-label="Homerun">2,496</td><td data-label="Trunk">309</td><td data-label="vs need">90%</td></tr>
-              <tr><td data-label="Day">Aug 17</td><td data-label="Total">1,548 &mdash; <strong>back-filled</strong> after Jose&rsquo;s order; crew change begins (9 &rarr; 7)</td><td data-label="Homerun">1,136</td><td data-label="Trunk">412</td><td data-label="vs need">50%</td></tr>
-              <tr><td data-label="Day">Aug 18</td><td data-label="Total"><strong>3,316 &mdash; all homerun</strong>, nine Inv-3 LBDs (back-filled)</td><td data-label="Homerun">3,316</td><td data-label="Trunk">0</td><td data-label="vs need">107%</td></tr>
-              <tr><td data-label="Day">Aug 19</td><td data-label="Total">2,509 &mdash; Inv-3 opened on 500 kcmil + <strong>11 harness lines / 29 strings</strong>; gang down to 4 electricians</td><td data-label="Homerun">1,996</td><td data-label="Trunk">513</td><td data-label="vs need">81%</td></tr>
-            </tbody>
+            <tbody id="ebDaily"></tbody>
           </table>
         </div>
-        <p class="quality-note"><strong>Daily report rule (German, Aug 12):</strong> every day states feet of LV cable hung, harnesses installed and boxes mounted, per line, against the requirement &mdash; nothing else. Harness and box daily counts join this table as they are reported; harness installation is material-gated until the 3-string harness shipments land. Production assumptions and the crew scenario &mdash; what gang enters, when, and at what rate per activity &mdash; live in the <a href="electrical-control.html?v=20260820a"><strong>full interactive study</strong></a>, which recalculates dates as the numbers move.</p>
+        <p class="quality-note" id="ebDailyNote"></p>
+
+<p class="quality-note"><strong>Daily report rule (German, Aug 12):</strong> every day states feet of LV cable hung, harnesses installed and boxes mounted, per line, against the requirement &mdash; nothing else. Harness and box daily counts join this table as they are reported; harness installation is material-gated until the 3-string harness shipments land. Production assumptions and the crew scenario &mdash; what gang enters, when, and at what rate per activity &mdash; live in the <a href="electrical-control.html?v=20260820a"><strong>full interactive study</strong></a>, which recalculates dates as the numbers move.</p>
       </section>
 
       <section class="section" id="schedule">
@@ -2957,6 +2874,166 @@ canvas { max-width: 100%; }
     document.getElementById('planTrackerNote').innerHTML = esc(P.note);
   }
 
+  // ---- ELECTRICAL BY LINE (rebuilt Sep 9, 2026) -------------------------------
+  // These three tables were static HTML frozen at the Aug 24 basis: they were still
+  // publishing L1 homerun 33,523 and harness 134 while the ledger stood at 57,886 and
+  // 896. They now render from data.electricalByLine so they cannot go stale again.
+  // Everything here reads lineas / alcance / lineaPlan / proyecto - update THOSE.
+  function renderElectricalByLine() {
+    var eb = data.electricalByLine; if (!eb || !eb.alcance) return;
+    var L = eb.lineas, A = eb.alcance, P = eb.lineaPlan, N = eb.lineaNota || {}, T = eb.proyecto;
+    var ids = ['L1', 'L2', 'L3', 'L4'];
+    var n = function (v) { return (v == null ? 0 : v).toLocaleString('en-US'); };
+    var pc = function (a, b) { return b ? (100 * a / b).toFixed(1) + '%' : '—'; };
+    // A cell reads red when the line is at zero on a scope its plan date needs, amber
+    // when it is behind the straight-line need, plain otherwise. No hardcoded verdicts.
+    var cell = function (done, scope) {
+      var t = '<strong>' + n(done) + '</strong> / ' + n(scope) + ' &middot; ' + pc(done, scope);
+      if (!done) return '<span style="color:#a12b2b">' + t + '</span>';
+      if (done > scope) return t + ' <small style="color:#b96f18">over take-off</small>';
+      return t;
+    };
+
+    var alertHost = document.getElementById('ebAlert');
+    if (alertHost) {
+      alertHost.innerHTML = '<strong>Basis of this section, re-based Sep 9, 2026.</strong> Until this cut every foot, assembly and box was booked to Line 1, ' +
+        'which put L1 at <strong>105.9% of its homerun take-off, 199% of its trunk and 194% of its boxes</strong> — a ledger that cannot be true, and the reason the ' +
+        'published Line 1 figures did not match what the field reports in the meetings. The split below is built from <strong>Angel Urbina’s per-LBD register</strong> ' +
+        '(an Installed/Pending status and a date on every run, verified through ~Sep 3, ECCS scope only) and the <strong>crew-and-location record on each daily report for Sep 4–8</strong>, ' +
+        'read through the inverter-to-circuit map confirmed Sep 3: <strong>11A = INV 1,2,3,5,6 &middot; 11B = INV 4,9,11,12,13,14 &middot; 12A = INV 18–23 &middot; 12B = INV 7,8,10,15,16,17</strong>. ' +
+        'So <strong>United’s PS18–PS23 front is Line 3, not Line 1</strong>, and <strong>INV-11 is Line 2</strong>. Production the daily report does not attribute to a line is <strong>held in its own row</strong> ' +
+        'and is never pushed onto a line. Project totals are unchanged: harness ' + n(T.harness) + ', homerun ' + n(T.homerun) + ' lf, trunk ' + n(T.trunk) + ' lf, boxes ' + n(T.boxes) + '.';
+    }
+
+    var rows = ids.map(function (id) {
+      var l = L[id], a = A[id], p = P[id];
+      return '<tr>' +
+        '<td data-label="Line" style="white-space:nowrap"><strong>' + id + ' &middot; ' + p.mv + '</strong></td>' +
+        '<td data-label="Zones">' + p.zonas + '<br><small>' + p.inv + '</small></td>' +
+        '<td data-label="LV works / MC"><strong>' + p.lvFin + '</strong><br><small>MC ' + p.mc + '</small></td>' +
+        '<td data-label="Boxes">' + cell(l.boxes, a.boxes) + '</td>' +
+        '<td data-label="Cable">' + cell(l.homerun + l.trunk, a.homerun + a.trunk) +
+          '<br><small>HR ' + n(l.homerun) + ' / ' + n(a.homerun) + ' &middot; trunk ' + n(l.trunk) + ' / ' + n(a.trunk) + '</small></td>' +
+        '<td data-label="Harness">' + cell(l.harness, a.harness) +
+          (id === 'L2' && T.harnessSP ? '<br><small>+ ' + n(T.harnessSP) + ' self-perform held outside the contractual ledger</small>' : '') + '</td>' +
+        '<td data-label="LV connections"><span style="color:#a12b2b"><strong>0</strong> / ' + n(a.connInv + a.connBox) + '</span>' +
+          (l.connMV ? '<br><small>MV inverter-side ' + n(l.connMV) + ' done</small>' : '') + '</td>' +
+        '</tr>';
+    });
+    var u = L.unstated || {};
+    if (u.harness || u.homerun || u.trunk || u.boxes) {
+      rows.push('<tr style="background:rgba(185,111,24,.07)">' +
+        '<td data-label="Line"><strong>NOT STATED BY LINE</strong></td>' +
+        '<td data-label="Zones">held out of every line</td>' +
+        '<td data-label="LV works / MC">&mdash;</td>' +
+        '<td data-label="Boxes"><strong>' + n(u.boxes) + '</strong></td>' +
+        '<td data-label="Cable"><strong>' + n((u.homerun || 0) + (u.trunk || 0)) + '</strong><br><small>HR ' + n(u.homerun) + ' &middot; trunk ' + n(u.trunk) + '</small></td>' +
+        '<td data-label="Harness"><strong>' + n(u.harness) + '</strong></td>' +
+        '<td data-label="LV connections">&mdash;</td></tr>');
+    }
+    document.getElementById('ebScope').innerHTML = rows.join('');
+
+    var noteHost = document.getElementById('ebNotes');
+    if (noteHost) {
+      noteHost.innerHTML = '<details style="margin-top:10px"><summary style="cursor:pointer;font-weight:800">Where each line actually stands — the evidence behind its row</summary>' +
+        ids.concat(['unstated']).map(function (id) {
+          if (!N[id]) return '';
+          var label = id === 'unstated' ? 'Not stated by line' : id + ' &middot; ' + P[id].mv;
+          return '<p style="margin:8px 0"><strong>' + label + ':</strong> ' + N[id] + '</p>';
+        }).join('') + '</details>';
+    }
+
+    // Demonstrated rates come from the daily series, never from a hardcoded figure.
+    // BOTH series are stored out of date order (harnessDiario opens with the newest day
+    // and diario ends with Sep 3), so anything that means "the last five days" MUST sort
+    // first - slicing the raw array gave a 28/day harness rate against a real 81/day.
+    var byDate = function (arr) {
+      var mon = { ago: 8, sep: 9 };
+      return (arr || []).slice().sort(function (a, b) {
+        var pa = String(a.d).split(' '), pb = String(b.d).split(' ');
+        return ((mon[pa[1]] || 0) * 100 + (+pa[0] || 0)) - ((mon[pb[1]] || 0) * 100 + (+pb[0] || 0));
+      });
+    };
+    var dd = byDate((eb.diario || []).filter(function (d) { return d && d.v != null; }));
+    var last5 = dd.slice(-5), cAvg = last5.length ? Math.round(last5.reduce(function (a, d) { return a + d.v; }, 0) / last5.length) : 0;
+    var best = dd.reduce(function (m, d) { return Math.max(m, d.v); }, 0);
+    var hd = byDate(eb.harnessDiario).slice(-5), hAvg = hd.length ? Math.round(hd.reduce(function (a, d) { return a + (d.l || 0); }, 0) / hd.length) : 0;
+
+    // Remaining and required rate per line, straight-line to its own LV works date on
+    // Juan de la Chica's Sep 8 plan. Status is judged against what this site has
+    // actually demonstrated - the 5-day average and the best day ever recorded - so a
+    // threshold is never a number somebody typed in.
+    document.getElementById('ebRates').innerHTML = ids.map(function (id) {
+      var l = L[id], a = A[id], p = P[id];
+      var cRem = Math.max((a.homerun + a.trunk) - (l.homerun + l.trunk), 0);
+      var hRem = Math.max(a.harness - l.harness, 0);
+      var wd = p.wd || 1;
+      var cDay = Math.round(cRem / wd), hDay = Math.round(hRem / wd);
+      // Status is derived, never written by hand: a line with nothing on the ground on a
+      // scope its date needs is Critical; otherwise it is judged on the required rate.
+      var st, why;
+      var connScope = a.connInv + a.connBox, connDone = (l.connInv || 0) + (l.connBox || 0);
+      var cablePct = (a.homerun + a.trunk) ? (l.homerun + l.trunk) / (a.homerun + a.trunk) : 0;
+      if (!(l.homerun + l.trunk) && !l.harness) { st = 'Critical'; why = 'nothing installed on any scope, on any date'; }
+      else if (best && cDay > best) { st = 'Critical'; why = 'needs <strong>more every day than the best day this project has ever had</strong> (' + n(best) + ' lf)'; }
+      // A line whose cable is nearly in but whose terminations are at zero is NOT on
+      // track - the pull rate flatters it. This is Line 1's actual condition.
+      else if (cablePct > 0.7 && connScope && !connDone) { st = 'At Risk'; why = 'cable nearly in but <strong>0 of ' + n(connScope) + ' LV connections</strong> — terminations, not pull, are the constraint'; }
+      else if (cAvg && cDay > cAvg) { st = 'At Risk'; why = 'above the demonstrated ' + n(cAvg) + ' lf/day average, below the best day'; }
+      else { st = 'Active'; why = 'inside the demonstrated ' + n(cAvg) + ' lf/day average'; }
+      return '<tr>' +
+        '<td data-label="Line" style="white-space:nowrap"><strong>' + id + ' &middot; ' + p.mv + '</strong></td>' +
+        '<td data-label="LV works finish"><strong>' + p.lvFin + '</strong></td>' +
+        '<td data-label="Working days">' + wd + '</td>' +
+        '<td data-label="Cable remaining">' + n(cRem) + '</td>' +
+        '<td data-label="Cable need/day"><strong>' + n(cDay) + ' lf/day</strong></td>' +
+        '<td data-label="Harness remaining">' + n(hRem) + '</td>' +
+        '<td data-label="Harness need/day"><strong>' + n(hDay) + '/day</strong></td>' +
+        '<td data-label="Status">' + badge(st) + ' <small>' + why + '</small></td></tr>';
+    }).join('');
+
+    document.getElementById('ebRateNote').innerHTML =
+      '<strong>How to read it.</strong> Each line is measured against <strong>its own LV works finish on the Sr. Controller’s Sep 8 plan</strong>, not against a project average. ' +
+      'Demonstrated project-wide performance over the last five reported days is <strong>' + n(cAvg) + ' lf/day of cable</strong> (best day ' + n(best) + ') and <strong>' + n(hAvg) + ' harness lines/day</strong> across three crews. ' +
+      'Those rates are the whole site, not one line, so a line asking for more than the project has ever produced in a day cannot be recovered by sequencing — only by crew. ' +
+      '<strong>Line 1 is the one line where the cable is nearly done (' + pc(L.L1.homerun + L.L1.trunk, A.L1.homerun + A.L1.trunk) + ') and the binding constraint is terminations, not pull:</strong> ' +
+      '0 of ' + n(A.L1.connInv + A.L1.connBox) + ' LV connections, with the crimpers and the certified megger still owed. ' +
+      '<strong>Lines 3 and 4 have no cable at all</strong>, and 12A also has no boxes, while its harness front is the busiest on site.';
+
+    // The last TEN reported days only, each judged against the rate the gate needs
+    // today. A four-week log of raw feet is not a control instrument (Jose, Sep 9):
+    // every row here has to answer "did that day hold the gate or not".
+    var SHOW = 10;
+    // REQUIRED IS MEASURED AGAINST JUAN DE LA CHICA'S SEP 8 PLAN (Jose, Sep 9), not the
+    // contract MC and not the old Sep 18 LV gate. Project basis = remaining cable over the
+    // working days to Oct 10, the last line's LV works finish. Derived, never hardcoded.
+    var gate = 269748;
+    var PB = eb.planBasis || {};
+    var req = PB.wd ? Math.round((gate - (T.cable || 0)) / PB.wd) : 0;
+    var all = byDate(eb.diario), cumAll = 0;
+    var withCum = all.map(function (d) { cumAll += d.v || 0; return { d: d, cum: cumAll }; });
+    document.getElementById('ebDaily').innerHTML = withCum.slice(-SHOW).map(function (x) {
+      var d = x.d, hit = req ? (d.v || 0) / req : 0;
+      var col = !d.v ? '#a12b2b' : hit >= 1 ? '#0c5f43' : hit >= 0.5 ? '#b96f18' : '#a12b2b';
+      return '<tr>' +
+        '<td data-label="Day" style="white-space:nowrap">' + d.d + '</td>' +
+        '<td data-label="Total">' + (d.v ? '<strong>' + n(d.v) + '</strong>' : '<span style="color:#a12b2b">0 — no production</span>') + '</td>' +
+        '<td data-label="Homerun">' + n(d.hr) + '</td>' +
+        '<td data-label="Trunk">' + n(d.tr) + '</td>' +
+        '<td data-label="vs required"><strong style="color:' + col + '">' + (req ? (100 * hit).toFixed(0) + '%' : '—') + '</strong></td>' +
+        '<td data-label="Cumulative">' + n(x.cum) + '</td>' +
+        '<td data-label="% of gate">' + (100 * x.cum / gate).toFixed(1) + '%</td></tr>';
+    }).join('');
+    var gap = (T.cable || 0) - cumAll;
+    document.getElementById('ebDailyNote').innerHTML =
+      'The last ' + SHOW + ' reported days, each measured against <strong>' + n(req) + ' lf/day</strong> — the rate that puts the remaining ' + n(gate - (T.cable || 0)) + ' lf in by <strong>' + PB.fin + '</strong>, ' +
+      PB.gate + ' on the <strong>' + PB.fuente + '</strong>. That is the goal this project is being run to, so it is the denominator here; the contract MC and the old Sep 18 LV gate are not used. ' +
+      'The earlier history is in the <a href="electrical-control.html?v=20260909d">interactive study</a> and is not repeated here. ' +
+      '<strong>The demonstrated average is ' + n(cAvg) + ' lf/day, ' + (req ? (100 * cAvg / req).toFixed(0) : '0') + '% of the plan rate; the best day the project has ever had (' + n(best) + ' lf) is ' + (req ? (100 * best / req).toFixed(0) : '0') + '% of it.</strong> That gap, not the individual rows, is the finding. ' +
+      (gap ? '<strong style="color:#b96f18">The daily series closes at ' + n(cumAll) + ' lf against the ' + n(T.cable) + ' lf cumulative the gate cards publish — an ' + n(Math.abs(gap)) + ' lf descuadre, carried openly until the team reconciles it.</strong> ' : '') +
+      '<strong>The denominator is 269,748 lf — cable only</strong>; the ' + n(eb.harnessScope || 4972) + ' harness assemblies are a different unit and are never summed into it.';
+  }
+
   function renderMilestones() {
     document.getElementById('milestones').innerHTML = data.milestones.map((row) => `
       <article class="milestone">
@@ -3012,6 +3089,7 @@ canvas { max-width: 100%; }
   drawResourceChart();
   renderMilestones();
   try { renderPlanTracker(); } catch (e) { if (window.console) console.error('MURCH: planTracker render failed', e); }
+  try { renderElectricalByLine(); } catch (e) { if (window.console) console.error('MURCH: electricalByLine render failed', e); }
   function renderMaterial() {
     var D = window.MURCH_DATA, M = D && D.materialPosition;
     var sec = document.getElementById('material');
@@ -3316,12 +3394,15 @@ window.stampTableLabels = stampTableLabels;
           // Cable and harness are DIFFERENT UNITS and are never summed (Jose, Aug 24). The
           // figure above is cable only - homerun + trunk. Harness rides alongside in assemblies.
           (function () {
-            var lc = D.lvComposite || {}, eb = D.electricalByLine || {}, L1 = (eb.lineas || {}).L1 || {};
+            // PROJECT cumulatives, not Line 1. Before Sep 9, 2026 this card read
+            // lineas.L1 because every foot was booked to L1; the by-line ledger has
+            // been re-based, so the project figures now come from `proyecto`.
+            var lc = D.lvComposite || {}, eb = D.electricalByLine || {}, PT = eb.proyecto || {};
             var out = '';
-            if (L1.homerun != null || L1.trunk != null) {
+            if (PT.homerun != null || PT.trunk != null) {
               out += '<span style="display:block;margin-top:6px;padding-top:6px;border-top:1px dotted var(--rule,#d8ded9)">' +
-                     'Homerun <b>' + (L1.homerun || 0).toLocaleString() + '</b> / 229,435 &middot; ' +
-                     'Trunk <b>' + (L1.trunk || 0).toLocaleString() + '</b> / 40,313</span>';
+                     'Homerun <b>' + (PT.homerun || 0).toLocaleString() + '</b> / 229,435 &middot; ' +
+                     'Trunk <b>' + (PT.trunk || 0).toLocaleString() + '</b> / 40,313</span>';
             }
             if (lc.harnessGateInstalled != null) {
               out += '<span style="display:block;margin-top:4px">Harness (separate unit): <b>' +
@@ -3402,13 +3483,14 @@ window.stampTableLabels = stampTableLabels;
       // twice (Jose, Aug 25) - the combined total lives on the LV gate tile instead, and the
       // two cards below are the ones that carry information the tile does not.
       var _di = _eb.diario || [];
-      var _L1 = (_eb.lineas || {}).L1 || {};
+      // PROJECT cumulatives (was lineas.L1 until the Sep 9, 2026 by-line re-base).
+      var _PT = _eb.proyecto || {};
       // Working days to the Sep 18 gate are DERIVED from the published cable requirement,
       // never hardcoded - a hardcoded 22 silently kept the per-cable-type rates on an old
       // basis after the gate window shortened (caught Aug 26).
       var HR_SCOPE = 229435, TR_SCOPE = 40313;
       var LV_WD = Math.max(1, Math.round((C.electrical.total - C.electrical.installed) / C.electrical.required));
-      var _hrCum = _L1.homerun || 0, _trCum = _L1.trunk || 0;
+      var _hrCum = _PT.homerun || 0, _trCum = _PT.trunk || 0;
       var _mkDay = function (x) { return 'Aug ' + String(x.d).split(' ')[0]; };
       var _hrDaily = _di.map(function (x) { return { day: _mkDay(x), value: x.hr || 0 }; });
       var _trDaily = _di.map(function (x) { return { day: _mkDay(x), value: x.tr || 0 }; });
