@@ -1,0 +1,43 @@
+diff --git a/data.js b/data.js
+index b6f01e5..f887b35 100644
+--- a/data.js
++++ b/data.js
+@@ -571,10 +571,10 @@ window.MURCH_DATA = {
+  proyecto: { harness: 896, harnessSP: 68, boxes: 258, homerun: 57886, trunk: 17394, cable: 75280, cableSerie: 74399 },
+  // Per-line scope - German Dominguez's Aug 12 take-off, the authorised split.
+  alcance: {
+- L1: { harness: 1082, boxes: 93, homerun: 54644, trunk: 8723, connInv: 186, connBox: 372, connMV: 30 },
++ L1: { harness: 1082, boxes: 92, homerun: 54644, trunk: 8723, connInv: 186, connBox: 372, connMV: 30 },
+  L2: { harness: 1292, boxes: 110, homerun: 53456, trunk: 10409, connInv: 220, connBox: 440, connMV: 36 },
+  L3: { harness: 1258, boxes: 110, homerun: 65846, trunk: 10274, connInv: 220, connBox: 440, connMV: 36 },
+- L4: { harness: 1340, boxes: 106, homerun: 55488, trunk: 10907, connInv: 212, connBox: 424, connMV: 36 }
++ L4: { harness: 1340, boxes: 107, homerun: 55488, trunk: 10907, connInv: 212, connBox: 424, connMV: 36 }
+  },
+  // LV works finish per line on Juan de la Chica's Sep 8 plan, and the working days
+  // left to it from `hoy`. Recompute `wd` on every run.
+@@ -585,17 +585,17 @@ window.MURCH_DATA = {
+  // the last line's LV works finish. Recompute `wd` on every run; never hardcode a rate.
+  planBasis: { fin: 'Oct 10, 2026', wd: 23, gate: 'LV works complete on the last circuit (12B)', fuente: 'Sr. Controller’s end-of-project plan, revised Sep 8, 2026' },
+  lineaPlan: {
+- L1: { mv: 'MV-11A', zonas: 'A + C', inv: '5 inv - INV-01,02,03,05,06', lvFin: 'Sep 17', mc: 'Oct 2', wd: 7 },
+- L2: { mv: 'MV-11B', zonas: 'E + EW', inv: '6 inv - INV-04,09,11,12,13,14', lvFin: 'Sep 24', mc: 'Oct 10', wd: 12 },
+- L3: { mv: 'MV-12A', zonas: 'F + G', inv: '6 inv - INV-18..23', lvFin: 'Oct 1', mc: 'Oct 17', wd: 17 },
+- L4: { mv: 'MV-12B', zonas: 'B + D + EW', inv: '6 inv - INV-07,08,10,15,16,17', lvFin: 'Oct 10', mc: 'Oct 24', wd: 23 }
++ L1: { mv: 'MV-11A', zonas: 'A + C', inv: '5 inv · PB-01,02,03 (A) · PB-05,06 (C)', lvFin: 'Sep 17', mc: 'Oct 2', wd: 7 },
++ L2: { mv: 'MV-11B', zonas: 'E', inv: '6 inv · PB-04,09,11,12,13,14 (all Zone E)', lvFin: 'Sep 24', mc: 'Oct 10', wd: 12 },
++ L3: { mv: 'MV-12A', zonas: 'F + G', inv: '6 inv · PB-18,21,22,23 (F) · PB-19,20 (G)', lvFin: 'Oct 1', mc: 'Oct 17', wd: 17 },
++ L4: { mv: 'MV-12B', zonas: 'B + D + E + F', inv: '6 inv · PB-07 (B) · PB-08,10 (D) · PB-15 (E) · PB-16,17 (F)', lvFin: 'Oct 10', mc: 'Oct 24', wd: 23 }
+  },
+  lineaNota: {
+- L1: 'Angel’s register is complete for 11A: <strong>92 of 92 LBD rows installed</strong>, homerun installed on INV-01/02/03/06 and <strong>zero on INV-05</strong>. Trunk is <strong>over its take-off (9,199 of 8,723 ft, 105.5%)</strong> — consistent with the procurement finding that the office take-off carries no offcut or waste allowance. What is missing on 11A is not cable, it is <strong>terminations: 0 of 372 box and 0 of 186 inverter connections</strong>, INV-2 and INV-3 not started, crimpers and certified megger still owed.',
++ L1: 'CONFIRMED by the CM workbook: its <em>Detalle LBD</em> tab itemises <strong>92 boxes on 11A, not 93</strong>, so <strong>Line 1 boxes are 100% COMPLETE</strong> — Angel’s register agrees (92 of 92 installed). Homerun is in on PB-01/02/03/06 and <strong>zero on PB-05</strong>. Trunk is <strong>over its take-off (9,199 of 8,723 ft, 105.5%)</strong>, consistent with a take-off carrying no offcut allowance. What is missing on 11A is not cable and not boxes, it is <strong>terminations: 0 of 372 box and 0 of 186 inverter connections</strong>, PB-02 and PB-03 not started, crimpers and certified megger still owed. <strong>Note on the CM workbook’s own rate for this line:</strong> its <em>Resumen</em> tab asks 11A for <strong>9,052 ft/day, 154.6 harness/day and 13.3 boxes/day</strong>. Every one of those is <strong>full scope divided by the days left, crediting nothing as executed</strong> — it asks for 13.3 boxes a day on a line whose boxes are finished. Measured against what is actually left, 11A needs <strong>1,894 ft/day and 93 harness/day</strong>. The workbook rates are a scope-over-time figure, not a recovery rate, and should not be quoted as one.',
+  L2: 'Real production, published as zero until this cut. <strong>INV-11 closed on LV Sep 7</strong> by the self-perform crew (circuits 2,3,4,5,6,9,15,16), 7,631 ft of trunk (73.3% of the line’s trunk take-off) and 5,988 ft of homerun. Harness 74 in the contractual ledger <strong>plus 68 self-perform lines held outside it</strong> — 142 all-in. Boxes 33 (Angel 26 verified + 7 LBD set in Area E Sep 7).',
+- L3: '<strong>307 harness lines — a third of the whole contractual harness ledger — were booked to Line 1 and are physically Line 3.</strong> United has worked PS18-PS23 continuously since Sep 1 (23 → 56 → 96 → 46 → 42 → 44 lines) plus 280 supports and 1,611 ft of messenger wire on Sep 8 alone. <strong>No cable and no boxes on 12A yet</strong>, and Angel’s control workbook carries no United rows at all (9 of 3,213 strings assigned), so none of this is in the verified register.',
+- L4: 'Genuinely at zero on every scope. Four zones feed it, two of them gated — Zone D on piling (712 in the tail) and Zone G unracked at G5/G7. <strong>12B homerun was due to start Sep 8 on the plan and nothing has been filed.</strong>',
+- unstated: '<strong>Production the daily report does not attribute to a line, held out rather than pushed onto a line.</strong> Cable: Sep 3 (4,282 ft), the ECCS remainder of Sep 4 (1,348 ft) and <strong>ECCS’s 5,043 ft on Sep 8, filed with no line or inverter stated</strong>. Harness: the 87 lines of Sep 4, filed with no crew split. Boxes: <strong>133 of the 258 published cannot be placed on a line — Angel’s verified register carries 118 project-wide against 258 reported</strong>, which is the single largest control divergence on this front. Luis and Audelio owe the line split; it is a one-column change to the daily report.'
++ L3: '<strong>CONFIRMED by the CM workbook.</strong> Its <em>Circuitos MV</em> tab maps <strong>PB-18, 21, 22, 23 (Zone F) and PB-19, 20 (Zone G) to MV-12A</strong> — so the whole PS18–PS23 front the field has worked since Sep 1 is Line 3, and the <strong>307 harness lines booked to Line 1 are physically here</strong> (23 → 56 → 96 → 46 → 42 → 44), plus 280 supports and 1,611 ft of messenger wire on Sep 8 alone. It also settles the zone dispute: <strong>Zone G belongs to 12A, not 12B</strong>. <strong>No cable and no boxes on 12A yet</strong>, and Angel’s register carries no United rows at all (9 of 3,213 strings assigned).',
++ L4: 'Zero on every measured scope, but <strong>not untouched</strong> — the self-perform log records MV and DC cable-entry penetrations drilled at <strong>PB-15, 16 and 17 on Sep 2</strong>. The CM workbook places 12B across <strong>four zones: B (PB-07), D (PB-08, PB-10), E (PB-15) and F (PB-16, PB-17)</strong> — not Zone G, as the older split had it. Zone D is still pile-gated (712 in the tail). <strong>12B homerun was due to start Sep 8 on the plan and nothing has been filed.</strong>',
++ unstated: '<strong>Production the daily report does not attribute to a line, held out rather than pushed onto a line.</strong> Cable: Sep 3 (4,282 ft), the ECCS remainder of Sep 4 (1,348 ft) and <strong>ECCS’s 5,043 ft on Sep 8, filed with no line or inverter</strong>. <strong>New evidence:</strong> the self-perform log puts 500 kcmil DC pulls at <strong>E11/E13 on Sep 3, E10/E12 on Sep 4 and the E11/E13 BLA trunk on Sep 5</strong> — all Zone E, so a real share of these feet is <strong>Line 2</strong>; the log carries no quantities, so nothing is moved without them. Harness: the 87 lines of Sep 4, no crew split. Boxes: <strong>133 of the 258 published cannot be placed on a line</strong> — Angel’s register carries 118 project-wide against 258 reported. Luis and Audelio owe the line split; it is a one-column change to the daily report.'
+  },
+  zonas: {
+  A: { modLeft: 421, rows: 0 }, C: { modLeft: 900, rows: 0 }, E: { modLeft: 116, rows: 0 },
