@@ -1,0 +1,26 @@
+MV: correct the 12B termination count and publish the junction-box side
+
+Read off the Sep 8 MV Termination Production Control (Breakdown tab, one row per
+inverter and per box - 46 units, 23 inverters + 23 MVJBs).
+
+CORRECTED
+- 12B was published as zero inverter-side. It has 3 completed at INV-15.
+  The per-line figures now sum to 45 and match the published total for the first
+  time; they previously summed to 42 against a published 45.
+- The MV chain risk note said 11B inverter-side was 18 of 27. It is 18 of 30.
+
+ADDED
+- The 264 terminations split 114 inverter-side + 150 box-side, and all 45 completed
+  are inverter-side: NOT ONE TERMINATION HAS BEEN MADE ON ANY OF THE 23 MV JUNCTION
+  BOXES - 0 of 150, 57% of the whole MV termination scope, on all four lines.
+- Per line, inverter-side / box-side: 11A 24 of 24 / 0 of 30; 11B 18 of 30 / 0 of 42;
+  12A 0 of 30 / 0 of 39; 12B 3 of 30 / 0 of 39.
+- The 23 junction boxes are one per power block - 5 on 11A, 6 each on 11B, 12A and
+  12B. Topland is still distributing them; installation has not started.
+
+The control also confirms the PB-to-line map a third time (11A = PB-01,02,03,05,06;
+11B = PB-04,09,11,12,13,14; 12A = PB-18..23 with PB-19/20 in Zone G;
+12B = PB-07,08,10,15,16,17), independently of the CM workbook and Angel's register.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Hwc2vsBqNzMpRXgn945P9u
