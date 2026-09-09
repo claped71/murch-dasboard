@@ -1,0 +1,25 @@
+Boxes: record the leading explanation for the 133 unplaced - United in Zones F and G
+
+Jose, Sep 9 (field knowledge): United has been and still is installing boxes in
+Zones F and G, and those should appear in the gates section of the daily
+subcontractor production reports.
+
+The arithmetic supports it and it is the only explanation that fits every figure:
+- Zone F carries 111 boxes and Zone G 35 (Detalle LBD, per Power Block), so the
+  F + G ceiling is 146 and the 133 unplaced sits inside it at 91%.
+- It explains the 258-vs-118 gap exactly: Angel's register is ECCS-only - 92 on 11A
+  plus 26 on 11B is 118 - and carries no United rows, so United's boxes could never
+  have appeared in it whatever the count.
+- 12A alone is 110 boxes, so 133 does not fit on Line 3 by itself. If confirmed,
+  roughly 110 belong to 12A and the balance to 12B's two Zone F blocks (PB-16, PB-17
+  - 36 boxes).
+
+Consequence if confirmed: Line 3 boxes move from 0 of 110 to at or near complete,
+and Line 4 picks up part of its Zone F share. The L3 note now says plainly that the
+published zero is very probably wrong rather than leaving it to read as no progress.
+
+NOTHING IS MOVED. The figures stay in the unplaced row until the gates section
+confirms them - the same rule applied to every other unattributed quantity.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Hwc2vsBqNzMpRXgn945P9u
